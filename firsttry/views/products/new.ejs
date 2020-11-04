@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <% include ../partials/header %>
+    </nav>
+    <div class="container">
+      <h2>Add something</h2>
+        <div class="jumbo">
+          <form class="edit" action="/products" method="POST">
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="" required id="name">
+            <label for="img">Image: </label>
+            <input type="text" name="img" value="" id="img">
+            <label for="description">Description: </label>
+            <textarea name="description" value="" id="description"></textarea>
+
+            <label for="sunday">Sunday </label>
+            <textarea name="sunday" value="" id="sunday"></textarea>
+            <label for="Monday">Monday </label>
+            <textarea name="Monday" value="" id="Monday"></textarea>
+            <label for="Tuesday">Tuesday </label>
+            <textarea name="Tuesday" value="" id="Tuesday"></textarea>
+            <label for="Wednesday">Wednesday </label>
+            <textarea name="Wednesday" value="" id="Wednesday"></textarea>
+            <label for="Thursday">Thursday </label>
+            <textarea name="Thursday" value="" id="Thursday"></textarea>
+            <label for="Friday">Friday </label>
+            <textarea name="Friday" value="" id="Friday"></textarea>
+            <label for="Saturday">Saturday </label>
+            <textarea name="Saturday" value="" id="Saturday"></textarea>
+            <label for="price">Price: </label>
+            <input type="number" name="price" min="0" step=".01" value="0" id="price">
+            <label for="qty">Quantity: </label>
+            <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0" id="qty"><br>
+            <input type="submit" name="submit" value="submit" class="edit-button">
+          </form>
+        </div>
+    </div>
+
+    
+  </body>
+</html>
+<style>
+    
+  body, nav, html, div.jumbo {
+background: linear-gradient(-45deg, #e0a57d, #d39676, #c0846c, #966158, #754446);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+</style>

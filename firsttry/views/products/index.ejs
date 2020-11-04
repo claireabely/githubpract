@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <% include ../partials/header %>
+    </nav>
+    <div class="container">
+      <h2>Choose your week</h2>
+      <div class="products">
+        <% products.forEach( product => { %>
+          <div class="card">
+            <h5> <%= product.name %></h5>
+            <a href="/products/<%=product.id%>">
+              <img src="<%= product.img %>" alt="An image of <%= product.name %>" /></a>
+              <h6>Miles Prescribed: <%=product.price %></h6>
+          </div>
+        <% }) %>
+      </div>
+   
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <% include ../partials/header %>
+    </nav>
+    <div class="container">
+      <h2>Your Weekly  Training Plan</h2>
+        <div class="jumbo">
+          <h3><%= product.name  %></h3>
+            <img src="<%= product.img %>" alt="An image of <%= product.name %>" class="jumbo-img" />
+            <p><%=product.description %></p>
+            <% if (product.qty <= 0) { %>
+              <h4 class="out-of-stock"> OUT OF STOCK </h4>
+            <% } else   { %>
+            <h6>Only <%= product.qty %> remaining</h6>
+            <h6>Sunday: <%= product.monday %> Miles</h6>
+            <form action="/products/<%=product.id%>/buy?_method=put" method="POST">
+              <button class="buy-button">Buy</button>
+            </form>
+            <h4>Miles Prescribed: <%= product.price %></h4>
+            <h5>Sunday: <%= product.Sunday %></h4>
+            <% } %>
+            <label for="sunday">Sunday </label>
+            <textarea name="sunday" value="" id="sunday">Long Run</textarea>
+            <label for="Monday">Monday </label>
+            <textarea name="Monday" value="" id="Monday"></textarea>
+            <label for="Tuesday">Tuesday </label>
+            <textarea name="Tuesday" value="" id="Tuesday"></textarea>
+            <label for="Wednesday">Wednesday </label>
+            <textarea name="Wednesday" value="" id="Wednesday"></textarea>
+            <label for="Thursday">Thursday </label>
+            <textarea name="Thursday" value="" id="Thursday"></textarea>
+            <label for="Friday">Friday </label>
+            <textarea name="Friday" value="" id="Friday"></textarea>
+            <label for="Saturday">Saturday </label>
+            <textarea name="Saturday" value="" id="Saturday"></textarea>
+        </div>
+        <div class="admin-actions">
+          <a href="/products/<%=product.id%>/edit"><button type="button" name="button" class="edit-button">Edit</button></a>
+          <form action="/products/<%=product.id%>?_method=DELETE" method="POST">
+            <button class="delete-button">DELETE</button>
+          </form>
+        </div>
+    </div>
+
+    
+  </body>
+</html>
+<style>
+body, nav, html, div.jumbo:hover {
+	background: linear-gradient(-45deg,  #e4e6f2, #9aafd9, #5e7ebf, #2f4073, #212940);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+</style>

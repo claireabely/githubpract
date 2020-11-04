@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <nav>
+      <% include ../partials/header %>
+    </nav>
+    <div class="container">
+      <h2>Improve this item</h2>
+        <div class="jumbo">
+          <form class="edit" action="/products/<%=product.id%>?_method=PUT" method="POST">
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="<%=product.name%>" id="name">
+            <label for="img">Image: </label>
+            <input type="text" name="img" value="<%=product.img%>" id="img">
+            <label for="description">Description: </label>
+            <textarea name="description" value="" id="description"></textarea>
+            <label for="price">Miles Prescribed: </label>
+            <input type="number" name="price" value="<%=product.price || 0 %>" min="0" step=".01">
+            <label for="qty">Quantity: </label>
+            <input type="number" name="qty" value="<%=product.qty || 0 %>" min="0" id="qty"> <br>
+            <input type="submit" name="submit" value="submit" class="edit-button">
+          </form>
+            <h5>Current image:</h5>
+            <img src="<%= product.img %>" alt="An image of <%= product.name %>" />
+        </div>
+    </div>
+  </body>
+ 
+
+</html>
+<style>
+    
+    body, nav, html, div.jumbo:hover {
+	background: linear-gradient(-45deg,#B9A095,#BC857C,#A63372,#BF3099, #AC17BF, #9512A6);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>

@@ -1,0 +1,187 @@
+/* * {
+  border: 1px solid gold;
+} */
+
+h1 {
+  display: inline-block;
+  color: white;
+  padding-left: 1em;
+  font-size: 4vmax;
+  margin-top: .3em;
+  text-shadow: 1px 1px 2px steelblue;
+}
+
+h1:hover {
+  text-shadow: 1px 1px 2px #F5B8D9;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+  text-shadow: .5px .5px 1px black;
+
+
+
+}
+
+button {
+  box-shadow: 1px 1px 4px ghostwhite;
+}
+
+nav {
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  font-weight: 40px;
+  top : 0;
+  z-index: 2;
+  box-shadow: 4px 4px 8px white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input, textarea {
+  min-width: 70%;
+}
+.container {
+  max-width: 37.5em;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.new-product {
+  background-color: white;
+  margin-top: 1em;
+  text-align: center;
+  margin-right: 2em;
+}
+
+h2  {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: .5px .5px  grey;
+  color: white;
+  font-family: 'Monument Extended', sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  
+  
+}
+
+.card {
+  flex-basis: 20%;
+  text-align: center;
+  padding: .3em;
+  margin: .5em;
+  box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  height: 237px;
+  overflow: scroll;
+}
+.card:hover {
+
+background-color: black;
+color: #FFF5EC;
+}
+
+.card h5 {
+  padding-top: 1em;
+  font-size: 1em;
+}
+
+img {
+  max-width: 90%;
+  max-height: 10vmax;
+}
+
+.card img:hover {
+  box-shadow: 0 0 8px #96DADD;
+}
+
+
+p {
+  max-width:70%;
+  margin: auto;
+}
+
+.jumbo-img {
+  max-width: 90%;
+  max-height: 25vmax;
+}
+
+.jumbo {
+  margin:auto;
+  width:90%;
+  text-align: center;
+  padding: .3em;
+  margin: 1em;
+  background-color: black;
+  color: white;
+  border-radius: 10%;
+  border: .2em solid #272124;
+}
+
+.jumbo h3 {
+  padding: 1em;
+  font-size: 3vmax;
+}
+
+.buy-button {
+  background-color: white;
+}
+.buy-button:hover {
+  background-color: black;
+  color:white;
+}
+
+.delete-button {
+  background-color: white;
+  margin-left: 1em;
+}
+.delete-button:hover {
+  background-color: black;
+  color:white;
+  margin-left: 1em;
+}
+input.edit-button , .edit-button {
+  background-color: white;
+}
+input.edit-button , .edit-button:hover {
+  background-color: black;
+  color:white
+}
+
+.admin-actions {
+  margin:auto;
+  display:flex;
+  justify-content: center;
+
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 820px) {
+    .card {
+        flex-basis: 28%;
+    }
+    .container{
+      width: 95%;
+    }
+}
+@media only screen and (max-width: 530px) {
+  .container{
+    margin-top: 12em;
+    width: 95%;
+  }
+  .card {
+      flex-basis: 43%;
+  }
+}

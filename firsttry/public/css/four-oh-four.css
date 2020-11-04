@@ -1,0 +1,116 @@
+
+@font-face {
+    font-family: 'grandslangb-side';
+    src: ursl('grandslang-b-side-webfont.woff2') format('woff2'),
+         url('grandslang-b-side-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    
+    }
+  
+    @font-face {
+        font-family: 'monument_extendedregular';
+        src: url('monumentextended-regular-webfont.woff2') format('woff2'),
+             url('monumentextended-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    
+    
+  }
+  p {
+    color: black;
+  }
+  
+  
+
+  
+  
+  body, html {
+    background: black;
+  color: white;
+  font-family: 'Monument Extended', sans-serif;
+  letter-spacing: 4px;
+  font-size: 3.5vmax;
+  text-align: center;
+}
+
+h1  {
+  font-family: 'Monument Extended', sans-serif;
+}
+
+h2 {
+  color: #223236;
+}
+
+button {
+    font-family: 'Monument Extended', sans-serif;
+    font-size: 3vmax;
+    padding: 1em;
+}
+
+.win-it {
+  background: white;
+  color: black;
+}
+
+.lose-it {
+  background: black;
+  color: white;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: steelblue;
+  text-decoration: none;
+}
+
+/****************************************************
+* Modals
+****************************************************/
+
+.modal {
+  background-color: rgba( 0, 0, 0, 0.4);
+  position: fixed;
+  top: 5.8em;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+
+}
+
+.welcome {
+    /*display: none;*/
+}
+
+.welcome h2 {
+  position: fixed;
+  top: 5em;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  text-shadow: 2px 2px 4px white;
+}
+
+.lose {
+    display: none;
+}
+
+.win {
+    display: none;
+}
+
+img {
+  width: 100%;
+}
