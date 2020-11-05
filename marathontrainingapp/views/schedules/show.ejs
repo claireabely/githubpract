@@ -19,7 +19,7 @@
                
                 <div class="calendar__title" style="display: flex; justify-content: center; align-items: center">
                   <div class="icon secondary chevron_left">‹</div>
-                  <h1 class="" style="flex: 1;"><span></span><strong> <h3>Week <%= product.weeknumber  %></h3></strong></h1>
+                  <h1 class="" style="flex: 1;"><span></span><strong> <h3>Week <%= schedule.weeknumber  %></h3></strong></h1>
                   <div class="icon secondary chevron_left">›</div>
                 </div> 
                 <div style="align-self: flex-start; flex: 0 0 1"></div>
@@ -62,13 +62,13 @@
               </tr>
               <tr>
                
-                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><div class= "train"><%= product.monday  %></div></div></div></div></td>
-                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= product.tuesday  %></div></div></div></td>
-                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= product.wednesday  %></div></div></div></td>
-                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= product.thursday  %></div></div></div></td>
-                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= product.friday  %></div></div></div></td>
-                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= product.saturday  %></div></div></div></td>
-                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= product.sunday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><div class= "train"><%= schedule.monday  %></div></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.tuesday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.wednesday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.thursday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.friday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.saturday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.sunday  %></div></div></div></td>
               </tr>
               <tr>
               
@@ -133,28 +133,28 @@
           </div>
           
           
-          <!-- <div class= "train"><%= product.monday  %></div>
-          <div class= "train"><%= product.tuesday  %></div>
-          <div class= "train"><%= product.wednesday  %></div>
-          <div class= "train"><%= product.thursday  %></div>
-          <div class= "train"><%= product.friday  %></div>
-          <div class= "train"><%= product.saturday  %></div> -->
-            <img src="<%= product.img %>" alt="An image of <%= product.name %>" class="jumbo-img" />
-            <p><%=product.description %></p>
-            <% if (product.qty <= 0) { %>
+          <!-- <div class= "train"><%= schedule.monday  %></div>
+          <div class= "train"><%= schedule.tuesday  %></div>
+          <div class= "train"><%= schedule.wednesday  %></div>
+          <div class= "train"><%= schedule.thursday  %></div>
+          <div class= "train"><%= schedule.friday  %></div>
+          <div class= "train"><%= schedule.saturday  %></div> -->
+            <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" class="jumbo-img" />
+            <p><%=schedule.description %></p>
+            <% if (schedule.qty <= 0) { %>
               <h4 class="out-of-stock"> OUT OF STOCK </h4>
             <% } else   { %>
-            <!-- <h6>Only <%= product.qty %> remaining</h6> -->
-            <form action="/products/<%=product.id%>/buy?_method=put" method="POST">
+            <!-- <h6>Only <%= schedule.qty %> remaining</h6> -->
+            <form action="/schedules/<%=schedule.id%>/buy?_method=put" method="POST">
               <button class="buy-button">Log</button>
             </form>
-            <h4>Miles Prescribed: <%= product.price %></h4>
+            <h4>Miles Prescribed: <%= schedule.price %></h4>
           
             <% } %>
         </div>
         <div class="admin-actions">
-          <a href="/products/<%=product.id%>/edit"><button type="button" name="button" class="edit-button">Edit</button></a>
-          <form action="/products/<%=product.id%>?_method=DELETE" method="POST">
+          <a href="/schedules/<%=schedule.id%>/edit"><button type="button" name="button" class="edit-button">Edit</button></a>
+          <form action="/schedules/<%=schedule.id%>?_method=DELETE" method="POST">
             <button class="delete-button">DELETE</button>
           </form>
         </div>

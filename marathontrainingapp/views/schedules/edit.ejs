@@ -12,35 +12,35 @@
     <div class="container">
       <h2>Improve this item</h2>
         <div class="jumbo">
-          <form class="edit" action="/products/<%=product.id%>?_method=PUT" method="POST">
+          <form class="edit" action="/schedules/<%=schedule.id%>?_method=PUT" method="POST">
             <label for="weeknumber">Name: </label>
-            <input type="number" name="weeknumber" value="<%=product.weeknumber%>" id="weeknumber">
+            <input type="number" name="weeknumber" value="<%=schedule.weeknumber%>" id="weeknumber">
             <label for="sunday">Sunday Workout: </label>
-            <input type="text" name="sunday" value="<%=product.sunday%>" id="sunday">
+            <input type="text" name="sunday" value="<%=schedule.sunday%>" id="sunday">
             <label for="monday">Monday Workout: </label>
-            <input type="text" name="monday" value="<%=product.monday%>" id="monday">
+            <input type="text" name="monday" value="<%=schedule.monday%>" id="monday">
             <label for="tuesday">Tuesday Workout: </label>
-            <input type="text" name="tuesday" value="<%=product.tuesday%>" id="tuesday">
+            <input type="text" name="tuesday" value="<%=schedule.tuesday%>" id="tuesday">
             <label for="wednesday">Wednesday Workout: </label>
-            <input type="text" name="wednesday" value="<%=product.wednesday%>" id="wednesday">
+            <input type="text" name="wednesday" value="<%=schedule.wednesday%>" id="wednesday">
             <label for="thursday">Thursday Workout: </label>
-            <input type="text" name="thursday" value="<%=product.thursday%>" id="thursday">
+            <input type="text" name="thursday" value="<%=schedule.thursday%>" id="thursday">
             <label for="friday">Friday Workout: </label>
-            <input type="text" name="friday" value="<%=product.friday%>" id="friday">
+            <input type="text" name="friday" value="<%=schedule.friday%>" id="friday">
             <label for="saturday">Saturday Workout: </label>
-            <input type="text" name="saturday" value="<%=product.saturday%>" id="saturday">
+            <input type="text" name="saturday" value="<%=schedule.saturday%>" id="saturday">
             <label for="img">Image: </label>
-            <input type="text" name="img" value="<%=product.img%>" id="img">
+            <input type="text" name="img" value="<%=schedule.img%>" id="img">
             <label for="description">Description: </label>
             <textarea name="description" value="" id="description"></textarea>
             <label for="price">Miles Prescribed: </label>
-            <input type="number" name="price" value="<%=product.price || 0 %>" min="0" step=".01">
+            <input type="number" name="price" value="<%=schedule.price || 0 %>" min="0" step=".01">
             <label for="qty">Quantity: </label>
-            <input type="number" name="qty" value="<%=product.qty || 0 %>" min="0" id="qty"> <br>
+            <input type="number" name="qty" value="<%=schedule.qty || 0 %>" min="0" id="qty"> <br>
             <input type="submit" name="submit" value="submit" class="edit-button">
           </form>
             <h5>Current image:</h5>
-            <img src="<%= product.img %>" alt="An image of <%= product.name %>" />
+            <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" />
         </div>
     </div>
   </body>
