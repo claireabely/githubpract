@@ -37,7 +37,7 @@ products.get('/json', async (req, res) => {
 // Index  : GET    '/products'          1/7
 products.get('/', async (req, res) => {
   try {
-    const products = await Product.find().sort({ name: 1 })
+    const products = await Product.find().sort({ weeknumber: 1 })
     if (!products.length) { res.send('waiting for database to be seeded <a href="/products/seed/newproducts">go here</a>') }
     res.render('./products/index.ejs', { products })
   } catch (err) {
@@ -55,6 +55,7 @@ products.get('/new', (req, res) => {
 products.get('/:id', async (req, res) => {
   try {
     const product = await Product.findById(req.params.id)
+    console.log(product)
     res.render('./products/show.ejs', { product: product })
   } catch (err) {
     res.send('That isn\'t a valid id! <a href="/products">Go back</a>')
@@ -120,105 +121,177 @@ products.put('/:id/buy', async (req, res) => {
 // note uses callbacks rather than async/await
 // you can upgrade to async/await, if you like
 products.get('/seed/newproducts', (req, res) => {
-  const newProducts =
-  module.exports =   [
+  const newProducts =  [
     {
-      name: 'Week 1',
-      description: 'Sunday: Long Run, Monday: Day Off, Tuesday: Reg Run 7 Miles, Wednesday: Intervals 9 Miles, Thursday: Reg Run 8 Miles, Friday: Flex Day 6 Miles, Saturday: AYF 8 Miles',
-      img: '',
+      weeknumber: 1,
+      description: 'Welcome to your 12-Week Moderate training plan. One of the keys to your success in the marathon will be your ability to train at the right intensity (pace). Our major goal for Week 1 is to start this process. Do your best to follow the prescribed paces, and take note of how you feel while doing it. Your ability to perceive your effort is a better indicator of intensity than even heart rate. This week you will jump right in and run Marathon-Pace Pickups. If this first week is overly difficult, we suggest that you switch to the Conservative program until your fitness improves. If this first week seems too easy, we suggest staying patient. Not all training needs to feel really hard. If, after another week, you still think the paces feel too easy, we suggest that you run a local road race. Your time from that race will update all your training paces and marathon goal pace ranges and generate a more fine-tuned training plan for you.',
+      img: 'https://i.imgur.com/uS2hTf0.png',
       price: 44,
-      Sunday:'Long Run 12 Miles',
-      Monday: 'Day Off',
-      Tuesday: 'Reg Run 7 Miles',
-      Wednesday: 'Intervals 9 Miles',
+      sunday:'Long Run 12 Miles',
+    monday: 'Day Off',
+    tuesday: 'Reg Run 7 Miles',
+    wednesday: 'Intervals 9 Miles',
+    thursday: 'Reg Run 8 Miles',
+    friday: 'Flex Day 6 Miles',
+    saturday: 'AYF 8 Miles',
       qty: 99
     },
     {
-      name: 'Week 2',
+      weeknumber: 2,
       description: '45 Miles Prescribed',
       img: '',
       price: 45,
+      sunday:'Long Run 14 Miles',
+      monday: 'Day Off',
+      tuesday: 'Reg Run 7 Miles',
+      wednesday: 'Intervals 9 Miles',
+      thursday: 'Reg Run 7 Miles',
+      friday: 'Flex Day 6 Miles',
+      saturday: 'AYF 8 Miles',
       qty: 1
     },
     {
-      name: 'Week 3',
+      weeknumber:  3,
       description: '45 Miles Prescribed',
       img: '',
       price: 45,
+      sunday:'Long Run 16 Miles',
+      monday: 'Day Off',
+      tuesday: 'Reg Run 7 Miles',
+      wednesday: 'Intervals 9 Miles',
+      thursday: 'Reg Run 8 Miles',
+      friday: 'Flex Day 6 Miles',
+      saturday: 'AYF 8 Miles',
       qty: 0
     },
-    {name: 'Week 4',
+    {weeknumber:  4,
     description: '45 Miles Prescribed',
     img: '',
-    description: 'Beautiful, ephemeral, assembly required',
     qty: 45,
+    sunday:'Long Run 16 Miles',
+    monday: 'Day Off',
+    tuesday: 'Reg Run 7 Miles',
+    wednesday: 'Intervals 9 Miles',
+    thursday: 'Reg Run 8 Miles',
+    friday: 'Flex Day 6 Miles',
+    saturday: 'AYF 8 Miles',
     price: 1000000
   },
   {
-    name: 'Week 5',
+    weeknumber: 5,
     description: '44 Miles Prescribed',
     img: '',
-    description: 'Forget your fears of agricultural genetic engineering and take your taste buds back to the beginning of time with this authentic unaltered fruit',
     price: 44,
+    sunday:'Long Run 16 Miles',
+    monday: 'Day Off',
+    tuesday: 'Reg Run 7 Miles',
+    wednesday: 'Intervals 9 Miles',
+    thursday: 'Reg Run 8 Miles',
+    friday: 'Flex Day 6 Miles',
+    saturday: 'AYF 8 Miles',
     qty: 72
   },
   {
-    name: 'Week 6',
+    weeknumber: 6,
     description: '49 Miles Prescribed',
     img: '',
-    description: 'Sustainably raised, cage-free, docile mantis shrimp. Makes a for a cuddly companion as long as you never make direct eye contact! Notice: this item is gluten-free, should your relationship go south',
     price: 49,
+    sunday:'Long Run 16 Miles',
+    monday: 'Day Off',
+    tuesday: 'Reg Run 7 Miles',
+    wednesday: 'Intervals 9 Miles',
+    thursday: 'Reg Run 8 Miles',
+    friday: 'Flex Day 6 Miles',
+    saturday: 'AYF 8 Miles',
     qty: 0
   },
   {
-    name: 'Week 7',
+    weeknumber: 7,
     description: '47 Miles Prescribed',
     img: '',
-    description: 'Get a jump on the next superfood craze. Kohlrabi\'s superiority is marked by its tricky to spell name. Text all your friends: You are going to live forever with the power of kholrabi',
     price: 47,
+    sunday:'Long Run 16 Miles',
+    monday: 'Day Off',
+    tuesday: 'Reg Run 7 Miles',
+    wednesday: 'Intervals 9 Miles',
+    thursday: 'Reg Run 8 Miles',
+    friday: 'Flex Day 6 Miles',
+    saturday: 'AYF 8 Miles',
     qty: 913462
   }, 
   {
-    name: 'Week 8',
+    weeknumber:  8,
     description: '36 Miles Prescribed',
     img: '',
-    description: 'Stop wasting your time doing one exercise at a time! With the YFM1000 you can do yoga and pilates at the same time! ',
     price: 36,
+    sunday:'Long Run 16 Miles',
+    monday: 'Day Off',
+    tuesday: 'Reg Run 7 Miles',
+    wednesday: 'Intervals 9 Miles',
+    thursday: 'Reg Run 8 Miles',
+    friday: 'Flex Day 6 Miles',
+    sat: 'AYF 8 Miles',
     qty: 14
   },
   {
-    name: 'Week 9',
+    weeknumber: 9,
     description: '48 Miles Prescribed',
     img: '',
-    description: 'Capture the beauty of anything and don\'t let it get away! Formaldehyde sold separatey ',
     price: 48,
+    sunday:'Long Run 16 Miles',
+    monday: 'Day Off',
+    tuesday: 'Reg Run 7 Miles',
+    wednesday: 'Intervals 9 Miles',
+    thursday: 'Reg Run 8 Miles',
+    friday: 'Flex Day 6 Miles',
+    saturday: 'AYF 8 Miles',
     qty: 49
   },
   {
-    name: 'Week 10',
+    weeknumber:  10,
     description: '34 Miles Prescribed',
     img: '',
-    description: 'Bored of your neighborhood? Bored of your typical vacation? Go to the 5th dimension',
     price: 34,
+    sun:'Long Run 16 Miles',
+    monday: 'Day Off',
+    tuesday: 'Reg Run 7 Miles',
+    wednesday: 'Intervals 9 Miles',
+    thursday: 'Reg Run 8 Miles',
+    friday: 'Flex Day 6 Miles',
+    saturday: 'AYF 8 Miles',
     qty: 54
   },
   {
-    name: 'Week 11',
+    weeknumber: 11,
     description: '25 Miles Prescribed',
     img: '',
-    description: 'Bored of your neighborhood? Bored of your typical vacation? Go to the 5th dimension',
     price: 25,
+    sunday:'Long Run 16 Miles',
+    monday: 'Day Off',
+    tuesday: 'Regular Run 4 Miles',
+    wednesday: 'Tempo 6 Miles',
+    thursday: 'Flex Day 3 Miles',
+    friday: 'Regular Run 4 Miles',
+    saturday: 'Regular Run 4 Miles',
     qty: 54
   },
   {
-    name: 'Week 12',
+    weeknumber: 12,
     description: '35 Miles Prescribed',
     img: '',
-    description: 'Bored of your neighborhood? Bored of your typical vacation? Go to the 5th dimension',
-    price: 35,
+   price: 35,
+   sunday:'As You Feel Run 3 Miles',
+   monday: 'Day Off',
+   tuesday: 'Day Off',
+   wednesday: 'Tempo 3 Miles',
+   thursday: 'As You Feel Run 3 Miles',
+   friday: 'Flex Day 3 Miles',
+   saturday: 'RACE DAY',
     qty: 54
   }
   ]
+  
+    
   
 
   Product.create(newProducts, (err, product) => {

@@ -8,37 +8,37 @@ const Schema = mongoose.Schema
 // Set up Schema
 // ___________________
 const productSchema = new Schema({
-  name: {
+  sunday: {
     type: String,
-    required: [true, 'No one will buy it if it does not have a name']
-},
-sunday: {
-  type: String,
-  required: [true, 'No one will buy it if it does not have a name']
+    min: [0, 'Price can\'t be less than 0. No capatalist joyrides here!']
 },
 monday: {
-  type:  String,
-  required: [true, 'No one will buy it if it does not have a name']
+  type: String,
+  min: [0, 'Price can\'t be less than 0. No capatalist joyrides here!']
 },
 tuesday: {
   type: String,
-  required: [true, 'No one will buy it if it does not have a name']
+  min: [0, 'Price can\'t be less than 0. No capatalist joyrides here!']
 },
 wednesday: {
   type: String,
-  required: [true, 'No one will buy it if it does not have a name']
+  min: [0, 'Price can\'t be less than 0. No capatalist joyrides here!']
 },
 thursday: {
   type: String,
-  required: [true, 'No one will buy it if it does not have a name']
+  min: [0, 'Price can\'t be less than 0. No capatalist joyrides here!']
 },
 friday: {
   type: String,
-  required: [true, 'No one will buy it if it does not have a name']
+  min: [0, 'Price can\'t be less than 0. No capatalist joyrides here!']
 },
 saturday: {
   type: String,
-  required: [true, 'No one will buy it if it does not have a name']
+  min: [0, 'Price can\'t be less than 0. No capatalist joyrides here!']
+},
+  weeknumber: {
+    type: Number,
+    min: [0, 'Quantity can\'t be less than 0. This ain\'t no charity!']
 },
   description: String,
   img: String,
