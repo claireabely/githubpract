@@ -1,0 +1,13 @@
+@mixin create-col($size: 0, $column: $grid-columns) {
+    @if $size == auto {
+        flex: 0 0 auto;
+        max-width: 100%;
+    } @else if $size == grow {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    } @else {
+        flex: 0 0 #{$size / $column * 100%};
+        max-width: #{$size / $column * 100%};
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ('../partials/head.ejs') -%>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Themebau | An award-winning digital studio</title>
+    <meta name="description" content="Themebau">
+    <meta name="author" content="Dexad">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- START: Styles -->
+    <!-- Swiper -->
+    <link rel="stylesheet" href="assets/vendor/swiper/dist/css/swiper.min.css" />
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="assets/vendor/fancybox/dist/jquery.fancybox.min.css" />
+    <!-- Themebau -->
+    <link rel="stylesheet" href="assets/css/themebau.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- END: Styles -->
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <%- include ('../partials/header.ejs') -%>
+    </nav>
+    <div class="container">
+      <h2>Choose your week</h2>
+      <div class="schedules">
+        <% schedules.forEach( schedule => { %>
+          <div class="card">
+            <h5>Week <%= schedule.weeknumber %></h5>
+            
+            <a href="/schedules/<%=schedule.id%>">
+              <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" /></a>
+              <h6>Miles Prescribed: <%=schedule.price %></h6>
+          </div>
+        <% }) %>
+      </div>
+   
+    </div>
+    
+  </body>
+</html>

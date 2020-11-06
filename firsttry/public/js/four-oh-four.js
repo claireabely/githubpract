@@ -4,8 +4,8 @@ $(() => {
 // jQuery Selectors
   const $body = $('body')
   const $h1 = $('h1')
-  const $loseIt = $('.lose-it')
-  const $loseScreen = $('.lose')
+
+
   const $newh1 = $('<h1>')
   const $newh2 = $('<h2>')
   const $welcome = $('.welcome')
@@ -18,21 +18,14 @@ $(() => {
     $welcome.fadeOut('slow')
   })
 
-  // check play on clicking `lose it` button
-  $loseIt.on('click', () => {
-    checkPlay('lose')
-  })
+
 
   // check play on clicking `win it` button
   $winIt.on('click', () => {
     checkPlay('win')
   })
 
-  // fade out lose modal on click
-  $loseScreen.on('click', () => {
-    resetPlay()
-    $loseScreen.fadeOut('slow')
-  })
+
 
   // fade out win modal on click
   $winScreen.on('click', () => {

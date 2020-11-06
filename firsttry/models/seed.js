@@ -1,8 +1,8 @@
 module.exports =   [
   {
-    name: 'Week 1',
+    weeknumber: 1,
     description: 'Welcome to your 12-Week Moderate training plan. One of the keys to your success in the marathon will be your ability to train at the right intensity (pace). Our major goal for Week 1 is to start this process. Do your best to follow the prescribed paces, and take note of how you feel while doing it. Your ability to perceive your effort is a better indicator of intensity than even heart rate. This week you will jump right in and run Marathon-Pace Pickups. If this first week is overly difficult, we suggest that you switch to the Conservative program until your fitness improves. If this first week seems too easy, we suggest staying patient. Not all training needs to feel really hard. If, after another week, you still think the paces feel too easy, we suggest that you run a local road race. Your time from that race will update all your training paces and marathon goal pace ranges and generate a more fine-tuned training plan for you.',
-    img: 'https://i.imgur.com/uS2hTf0.png',
+    img: '',
     price: 44,
     sunday:'Long Run 12 Miles',
   monday: 'Day Off',
@@ -14,7 +14,7 @@ module.exports =   [
     qty: 99
   },
   {
-    name: 'Week 2',
+    weeknumber: 2,
     description: '45 Miles Prescribed',
     img: '',
     price: 45,
@@ -28,7 +28,7 @@ module.exports =   [
     qty: 1
   },
   {
-    name: 'Week 3',
+    weeknumber:  3,
     description: '45 Miles Prescribed',
     img: '',
     price: 45,
@@ -41,7 +41,7 @@ module.exports =   [
     saturday: 'AYF 8 Miles',
     qty: 0
   },
-  {name: 'Week 4',
+  {weeknumber:  4,
   description: '45 Miles Prescribed',
   img: '',
   qty: 45,
@@ -55,7 +55,7 @@ module.exports =   [
   price: 1000000
 },
 {
-  name: 'Week 5',
+  weeknumber: 5,
   description: '44 Miles Prescribed',
   img: '',
   price: 44,
@@ -69,7 +69,7 @@ module.exports =   [
   qty: 72
 },
 {
-  name: 'Week 6',
+  weeknumber: 6,
   description: '49 Miles Prescribed',
   img: '',
   price: 49,
@@ -83,7 +83,7 @@ module.exports =   [
   qty: 0
 },
 {
-  name: 'Week 7',
+  weeknumber: 7,
   description: '47 Miles Prescribed',
   img: '',
   price: 47,
@@ -97,7 +97,7 @@ module.exports =   [
   qty: 913462
 }, 
 {
-  name: 'Week 8',
+  weeknumber:  8,
   description: '36 Miles Prescribed',
   img: '',
   price: 36,
@@ -111,7 +111,7 @@ module.exports =   [
   qty: 14
 },
 {
-  name: 'Week 9',
+  weeknumber: 9,
   description: '48 Miles Prescribed',
   img: '',
   price: 48,
@@ -125,7 +125,7 @@ module.exports =   [
   qty: 49
 },
 {
-  name: 'Week 10',
+  weeknumber:  10,
   description: '34 Miles Prescribed',
   img: '',
   price: 34,
@@ -139,7 +139,7 @@ module.exports =   [
   qty: 54
 },
 {
-  name: 'Week 11',
+  weeknumber: 11,
   description: '25 Miles Prescribed',
   img: '',
   price: 25,
@@ -153,7 +153,7 @@ module.exports =   [
   qty: 54
 },
 {
-  name: 'Week 12',
+  weeknumber: 12,
   description: '35 Miles Prescribed',
   img: '',
  price: 35,
