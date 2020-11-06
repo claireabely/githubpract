@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 4000
 // ___________________
 // Database
 // ___________________
-const mongoURI = process.env.MONGODBURI || 'mongodb://localhost:27017/marathontrain'
+const mongoURI = process.env.MONGODBURI || 'mongodb://localhost:27017/marathontest'
 
 
 
