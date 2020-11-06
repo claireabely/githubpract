@@ -11,12 +11,12 @@ const db = mongoose.connection
 // ___________________
 // Port (set up for hosting w. heroku)
 // ___________________
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 7000
 
 // ___________________
 // Database
 // ___________________
-const mongoURI = process.env.MONGODBURI || 'mongodb://localhost:27017/marathontest'
+const mongoURI = process.env.MONGODBURI || 'mongodb://localhost:27017/marathontrain'
 
 
 
@@ -89,4 +89,4 @@ app.get('*', (req, res) => {
 // ___________________
 // Listener
 // ___________________
-app.listen(PORT, () => console.log('Keep training until you PR!', PORT))
+app.listen(PORT, () => console.log('Keep training til you PR!', PORT))
