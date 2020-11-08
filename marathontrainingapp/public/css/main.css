@@ -76,8 +76,8 @@ h2  {
   text-align: center;
   padding: .3em;
   margin: .5em;
-  box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
-  border-radius: 10px;
+  box-shadow: 1px 1px 2px #cbdc00, -1px 1px 2px #cbdc00;
+  border-radius: 0px;
   background-color: black;
   color: white;
   height: 237px;
@@ -192,16 +192,28 @@ input.edit-button , .edit-button:hover {
 body {
   flex-direction: column;
   display: flex;
-
+  background: black;
+  /* background: linear-gradient(to top, #000000, #000000, #000000, #9512A6, #AC17BF, #BF3099, #BC857C, #B9A095); */
   font-family: 'Monument Extended', sans-serif;
   padding: 3rem;
   margin: 0;
-  background: black;
+
   box-sizing: border-box;
   height: 100vh;
 }
+.center {
+  width: 300px;
+  height: 160px;
+  margin: 0 auto;
+}
 
-
+iframe {
+  max-width: 90%;
+  max-height: 10vmax;
+}
+iframe {
+  border-style: none;
+}
 
 .calendar {
   margin: 0 auto;
@@ -401,3 +413,4 @@ tr td:nth-child(2), tr td:nth-child(3), .past {
 
 
 }
+

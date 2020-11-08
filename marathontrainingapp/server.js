@@ -66,13 +66,9 @@ app.use('/schedules', schedulesController)
 app.get('/', (req, res) => {
   res.redirect('/schedules')
 })
-
-// Schedule.create(newSchedules, (err, schedule) => {
-//     if (err) { console.log(err) }
-//     console.log('SEED: NEW SCHEDULES CREATED!')
-//     res.redirect('/schedules')
-//   })
-
+app.get('/', (req, res) => {
+    res.redirect('/stats')
+  })
 // app.get('/seed', (req, res) => {
 //     res.render('pokedex.ejs', {
 //       // sends pokemon data into the pokedex.ejs page under the variable 'data'
@@ -85,7 +81,9 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
     res.render('./four-oh-four/index.ejs')
   })
-
+  app.get('*', (req, res) => {
+    res.render('./stats/index.ejs')
+  })
 // ___________________
 // Listener
 // ___________________

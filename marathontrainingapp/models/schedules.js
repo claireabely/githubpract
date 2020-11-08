@@ -36,6 +36,10 @@ saturday: {
     type: Number,
     min: [0, 'Quantity can\'t be less than 0. This ain\'t no charity!']
 },
+iframe: {
+    type: String,
+    min: [0, 'Price can\'t be less than 0. No capatalist joyrides here!']
+},
   description: String,
   img: String,
   price: {

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <%- include ('../partials/head.ejs') -%>
+  </head>
+  <body>
+    <nav>
+      <%- include ('../partials/header.ejs') -%>
+    </nav>
+    <div class="container">
+    <div class="container mt">
+      <h1 class="text-center">Progress Visualizer</h1>
+      <div class="row mt">
+        <div class="col-md-6">
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="col-md-6">
+          <canvas id="canvas2"></canvas>
+        </div>
+      </div>
+      <div class="row mt">
+        <div class="col-md-6">
+          <canvas id="canvas3"></canvas>
+        </div>
+        <div class="col-md-6">
+          <canvas id="canvas4"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/api.js"></script>
+    <script src="/stats.js"></script>
+  </body>
+</html>
+<style>
+    
+  
+  @font-face {
+      font-family: 'monument_extendedregular';
+      src: url('monumentextended-regular-webfont.woff2') format('woff2'),
+           url('monumentextended-regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  
+  }
+  huge ui blue button complete{
+    font-family: 'Monument Extended', sans-serif;
+  }
+
+body{
+
+  font-family: 'Monument Extended', sans-serif;
+  
+}
+#complete{
+
+font-family: 'Monument Extended', sans-serif;
+font-size: 12px;
+}
+
+.toast{
+  	background: black;
+  font-family: 'Monument Extended', sans-serif;
+}
+</style>
+</body>
+</html>

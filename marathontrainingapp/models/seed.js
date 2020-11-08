@@ -1,8 +1,9 @@
 module.exports =   [
     {
       weeknumber: 1,
-      description: '',
-      img: '',
+      description: 'Coachs Tip: Nutrition Hydration, Body weight can be used as a functional indicator of hydration status. If possible, weigh yourself before and immediately after the run. Your goal is to have only lost between 0-2% of your initial body weight, as performance does not decrease until you are more than 2% dehydrated. If you have lost more than 2% of your initial bodyweight so for you that is 2.4 lbs, you did not take in enough fluid during the run. Due to variables such as running pace, environmental conditions, individual sweating rate, and clothing, it is challenging to recommend specific fluid and electrolyte intake amounts. As always, our advice is to seek the assistance of a nutritional professional who will evaluate your individual needs',
+      img: 'https://i.imgur.com/3KEOLq1.jpg',
+      iframe: 'https://www.strava.com/segments/852256/embed',
       price: 44,
       sunday:'Long Run 12 Miles',
     monday: 'Day Off',
@@ -15,8 +16,9 @@ module.exports =   [
     },
     {
       weeknumber: 2,
-      description: '45 Miles Prescribed',
-      img: '',
+      description: 'Notes on your run here',
+      iframe: 'https://www.strava.com/segments/852256/embed',
+      img: 'https://i.imgur.com/0PbW78a.jpg',
       price: 45,
       sunday:'Long Run 14 Miles',
       monday: 'Day Off',
@@ -30,7 +32,8 @@ module.exports =   [
     {
       weeknumber:  3,
       description: '45 Miles Prescribed',
-      img: '',
+      iframe: 'https://www.strava.com/segments/852256/embed',
+      img: 'https://i.imgur.com/EtRiVLT.jpg',
       price: 45,
       sunday:'Long Run 16 Miles',
       monday: 'Day Off',
@@ -43,7 +46,8 @@ module.exports =   [
     },
     {weeknumber:  4,
     description: '45 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/IPOehy8.jpg',
+    iframe: 'https://www.strava.com/segments/852256/embed',
     qty: 45,
     sunday:'Long Run 16 Miles',
     monday: 'Day Off',
@@ -52,12 +56,13 @@ module.exports =   [
     thursday: 'Reg Run 8 Miles',
     friday: 'Flex Day 6 Miles',
     saturday: 'AYF 8 Miles',
-    price: 1000000
+    price: 45
   },
   {
     weeknumber: 5,
     description: '44 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/yi2YRnx.jpg',
+    iframe: 'https://www.strava.com/segments/852256/embed',
     price: 44,
     sunday:'Long Run 16 Miles',
     monday: 'Day Off',
@@ -71,8 +76,9 @@ module.exports =   [
   {
     weeknumber: 6,
     description: '49 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/wiR4QCv.jpg',
     price: 49,
+     iframe: 'https://www.strava.com/segments/852256/embed',
     sunday:'Long Run 16 Miles',
     monday: 'Day Off',
     tuesday: 'Reg Run 7 Miles',
@@ -85,7 +91,8 @@ module.exports =   [
   {
     weeknumber: 7,
     description: '47 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/DjEXbh6.jpg', 
+    iframe: 'https://www.strava.com/segments/852256/embed',
     price: 47,
     sunday:'Long Run 16 Miles',
     monday: 'Day Off',
@@ -99,7 +106,8 @@ module.exports =   [
   {
     weeknumber:  8,
     description: '36 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/QMb2BW8.jpg',
+    iframe: 'https://www.strava.com/segments/852256/embed',
     price: 36,
     sunday:'Long Run 16 Miles',
     monday: 'Day Off',
@@ -113,7 +121,8 @@ module.exports =   [
   {
     weeknumber: 9,
     description: '48 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/QMb2BW8.jpg',
+    iframe: 'https://www.strava.com/segments/852256/embed',
     price: 48,
     sunday:'Long Run 16 Miles',
     monday: 'Day Off',
@@ -127,7 +136,8 @@ module.exports =   [
   {
     weeknumber:  10,
     description: '34 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/XRsN1cT.jpg',
+    iframe: 'https://www.strava.com/segments/852256/embed',
     price: 34,
     sun:'Long Run 16 Miles',
     monday: 'Day Off',
@@ -141,7 +151,8 @@ module.exports =   [
   {
     weeknumber: 11,
     description: '25 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/yi2YRnx.jpg',
+    iframe: 'https://www.strava.com/segments/852256/embed',
     price: 25,
     sunday:'Long Run 16 Miles',
     monday: 'Day Off',
@@ -155,7 +166,8 @@ module.exports =   [
   {
     weeknumber: 12,
     description: '35 Miles Prescribed',
-    img: '',
+    img: 'https://i.imgur.com/3KEOLq1.jpg',
+    iframe: 'https://www.strava.com/segments/852256/embed',
    price: 35,
    sunday:'As You Feel Run 3 Miles',
    monday: 'Day Off',

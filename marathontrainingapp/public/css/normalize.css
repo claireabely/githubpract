@@ -209,6 +209,9 @@ sup {
 img {
   border-style: none;
 }
+iframe {
+  border-style: none;
+}
 
 /**
  * Hide the overflow in IE.

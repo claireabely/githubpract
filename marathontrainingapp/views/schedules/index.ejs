@@ -8,7 +8,33 @@
     <nav>
       <%- include ('../partials/header.ejs') -%>
     </nav>
+    <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    <div class="center">
+      <iframe height='500' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/latest-rides/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
+      <iframe height='200' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/activity-summary/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
+      <button type="button" name="button" class="new-schedule"><a href="https://secure2.convio.net/mskcc/site/DocServer/FT17_NYC_SummerTrainingSchedule.pdf?docID=8783">Your Team</a></button>
+    </div>
+      <div id="data"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
     <div class="container">
+        
+        
+        
       <h2>Choose your week</h2>
       <div class="schedules">
         <% schedules.forEach( schedule => { %>
@@ -18,6 +44,9 @@
             <a href="/schedules/<%=schedule.id%>">
               <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" /></a>
               <h6>Miles Prescribed: <%=schedule.price %></h6>
+              <a href="/schedules/<%=schedule.id%>">
+              <iframes height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.iframe %>" /></a>
+
           </div>
         <% }) %>
       </div>
@@ -26,3 +55,7 @@
     
   </body>
 </html>
+
+<style>
+  
+</style>

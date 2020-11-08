@@ -9,7 +9,7 @@
       <%- include ('../partials/header.ejs') -%>
     </nav>
     <div class="container">
-      <h2>Add something</h2>
+      <h2>Add Your Completed Workouts </h2>
         <div class="jumbo">
           <form class="edit" action="/schedules" method="POST">
             <label for="weeknumber">Name: </label>
@@ -30,9 +30,9 @@
             <input type="text" name="saturday" value="" required id="saturday">
             <label for="img">Image: </label>
             <input type="text" name="img" value="" id="img">
-            <label for="description">Description: </label>
+            <label for="description">Notes: </label>
             <textarea name="description" value="" id="description"></textarea>
-            <label for="price">Price: </label>
+            <label for="price">Miles Completed </label>
             <input type="number" name="price" min="0" step=".01" value="0" id="price">
             <label for="qty">Quantity: </label>
             <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0" id="qty"><br>
@@ -48,7 +48,6 @@
     
   body, nav, html, div.jumbo {
 background: black;
-/* linear-gradient(-45deg, #e0a57d, #d39676, #c0846c, #966158, #754446); */
 background-size: 400% 400%;
 animation: gradient 15s ease infinite;
 }
